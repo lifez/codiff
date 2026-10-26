@@ -2427,8 +2427,7 @@ html[data-codiff-platform='darwin'] .sidebar {
 
 .codiff-markdown-preview {
   box-sizing: border-box;
-  inline-size: min(100%, 920px);
-  max-inline-size: 920px;
+  inline-size: 100%;
   min-inline-size: 0;
   padding: 0;
 }
