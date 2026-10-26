@@ -945,6 +945,8 @@ ipcMain.on(
  * @param {string} repositoryPath
  * @param {CodiffLaunchOptions} [launchOptions]
  * @param {WindowIdentity | null} [identity]
+ * @param {Promise<RepositoryState>} [preloadedRepositoryState]
+ * @returns {import('electron').BrowserWindow}
  */
 const createWindow = (
   repositoryPath,
@@ -1175,6 +1177,7 @@ const createWindow = (
   } else {
     window.loadURL(pathToFileURL(join(root, 'dist/index.html')).toString());
   }
+  return window;
 };
 
 /** @param {import('electron').BrowserWindow} window */
